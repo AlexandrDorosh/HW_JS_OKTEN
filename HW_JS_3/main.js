@@ -203,17 +203,11 @@
 // let arr_2 = [2,3,4,5];
 // let arr_3 = [];
 
-// function plusIndex(arr_1, arr_2){
-// let res_1;
-//     for(one of arr_1){
-//         // console.log(one);
-//         res_1 = one;
-//         }
-
-//     for(two of arr_2){
-//         console.log(two);
+// const splitArray = (arr1, arr2) => {
+//     const newArray = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         newArray[i] = arr1[i] + arr2[i]
 //     }
-//     console.log(res_1);
+//    return newArray;
 // }
-
-// plusIndex(arr_1, arr_2);
+// console.log(splitArray([1, 2, 3, 4], [2, 3, 4, 5]))

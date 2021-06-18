@@ -203,19 +203,17 @@ document.body.append(h1);
 let div = document.createElement('div');
 document.body.appendChild(div);
 div.id = 'wrap';
-let div2
-for(let rule of rules){
-    div2 = document.createElement('div');
-    for(let i = 1; i <= rules.length; i++){
-        console.log(i);
-        div2.className = `rules rule${i}`;
-    }
+for(let i = 0; i <= rules.length; i++){
+    let div2 = document.createElement('div');
     let h2 = document.createElement('h2');
     let p = document.createElement('p');
-    h2.innerText = `${rule.title}`;
-    p.innerText = `${rule.body}`;
+
+    div2.className = `rules rule${i + 1}`;
+
+    h2.innerText = `${rules[i].title}`;
+    p.innerText = `${rules[i].body}`;
+
     div2.appendChild(h2);
     div2.appendChild(p);
-    // div2.className = `rules rule`;
     div.appendChild(div2);
 }

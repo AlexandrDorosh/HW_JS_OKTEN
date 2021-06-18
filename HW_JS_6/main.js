@@ -198,24 +198,25 @@ let rules = [
 ];
 
 let h1 = document.createElement('h1');
-h1.innerText = 'Правила бойцовского клуба'
-document.body.append(h1);
 let div = document.createElement('div');
-document.body.appendChild(div);
+
+h1.innerText = 'Правила бойцовского клуба';
 div.id = 'wrap';
-let div2
-for(let rule of rules){
-    div2 = document.createElement('div');
-    for(let i = 1; i <= rules.length; i++){
-        console.log(i);
-        div2.className = `rules rule${i}`;
-    }
+
+document.body.append(h1);
+document.body.appendChild(div);
+
+for(let i = 1; i <= rules.length; i++){
+    let div2 = document.createElement('div');
     let h2 = document.createElement('h2');
     let p = document.createElement('p');
-    h2.innerText = `${rule.title}`;
-    p.innerText = `${rule.body}`;
+
+    div2.className = `rules rule${i}`;
+
+    h2.innerText = `${rules[i].title}`;
+    p.innerText = `${rules[i].body}`;
+
     div2.appendChild(h2);
     div2.appendChild(p);
-    // div2.className = `rules rule`;
     div.appendChild(div2);
 }

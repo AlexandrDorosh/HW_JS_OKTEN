@@ -64,51 +64,51 @@
 
 // Answer #3
 
-// function Car(model, producer, year, maxSpeed, engineCapacity){
-//     this.model = model
-//     this.producer = producer
-//     this.year = year
-//     this.maxSpeed = maxSpeed
-//     this.engineCapacity = engineCapacity
-//     this.driver = {}
+function Car(model, producer, year, maxSpeed, engineCapacity){
+    this.model = model
+    this.producer = producer
+    this.year = year
+    this.maxSpeed = maxSpeed
+    this.engineCapacity = engineCapacity
+    this.driver = {}
 
-//     this.drive = function(){
-//         console.log(`Go with speed ${this.maxSpeed} in hour`);
-//     }
+    this.drive = function(){
+        console.log(`Go with speed ${this.maxSpeed} in hour`);
+    }
 
-//     this.info = function(){
-//         console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${this.maxSpeed}, Engine capacity: ${this.engineCapacity}`);
-//     }
+    this.info = function(){
+        console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${this.maxSpeed}, Engine capacity: ${this.engineCapacity}`);
+    }
 
-//     this.increaseMaxSpeed = function(newSpeed){
-//         this.maxSpeed = this.maxSpeed + newSpeed;
-//         console.log(`New speed: ${newSpeed}`);
-//     }
+    this.increaseMaxSpeed = function(newSpeed){
+        this.maxSpeed = this.maxSpeed + newSpeed;
+        console.log(`New speed: ${newSpeed}`);
+    }
 
-//     this.changeYear = function(newValue){
-//         this.year = newValue
-//         console.log(`New value: ${newValue}`);
-//     }
+    this.changeYear = function(newValue){
+        this.year = newValue
+        console.log(`New value: ${newValue}`);
+    }
 
-//     this.addDriver = function(driver){
-//         this.driver = driver;
-//         console.log(`Driver: ${driver}`);
-//     }
-// }
+    this.addDriver = function(driver){
+        this.driver = driver;
+        console.log(`Driver: ${driver}`);
+    }
+}
 
-// let Audi = new Car('A6', "Germany", 2016, 220, 2.5, 260, 2019,
-//     {name: 'Alex',
-//     surname: 'Dovhal',
-//     age: 22,
-//     driversDocumentFrom: 2016 });
+let Audi = new Car('A6', "Germany", 2016, 220, 2.5, 260, 2019,
+    {name: 'Alex',
+    surname: 'Dovhal',
+    age: 22,
+    driversDocumentFrom: 2016 });
 
 
-// Audi.drive();
-// Audi.info();
-// Audi.increaseMaxSpeed(15);
-// Audi.changeYear(2001);
-// Audi.addDriver({name: 'Maks', age: '80'});
-// console.log(Audi);
+Audi.drive();
+Audi.info();
+Audi.increaseMaxSpeed(15);
+Audi.changeYear(2001);
+Audi.addDriver({name: 'Maks', age: '80'});
+console.log(Audi);
 
 
 // Exercise #4
@@ -119,18 +119,20 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 
-// Answer #4
+// Answer #4                              // TODO перероби це завдання. Ті самі помилки
 
 // class Car{
-//     constructor(model, producer, year, maxSpeed, engineCapacity){
+//     constructor(model, producer, year, maxSpeed, engineCapacity, newSpeed, newValue, driver){
 //         this.model = model,
 //         this.producer = producer,
 //         this.year = year,
 //         this.maxSpeed = maxSpeed,
 //         this.engineCapacity = engineCapacity,
-//         this.driver = {}
+//         this.newSpeed = newSpeed,
+//         this.newValue = newValue,
+//         this.driver = driver
 //     }
-    
+
 
 //     drive(){
 //         console.log(`Go with speed ${this.maxSpeed} in hour`);
@@ -140,23 +142,21 @@
 //         console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${this.maxSpeed}, Engine capacity: ${this.engineCapacity}`);
 //     }
 
-//     increaseMaxSpeed(newSpeed){
-//         this.maxSpeed = this.maxSpeed + newSpeed;
-//         console.log(`New speed: ${newSpeed}`);
+//     increaseMaxSpeed(){
+//         console.log(`New speed: ${this.newSpeed}`);
 //     }
-        
-//     changeYear(newValue){
-//         this.year = newValue
-//         console.log(`New value: ${newValue}`);
+
+//     changeYear(){
+//         console.log(`New value: ${this.newValue}`);
 //     }
-        
-//     addDriver(driver){
-//         this.driver = driver;
-//         console.log(`Driver: ${driver}`);
+
+//     addDriver(){
+//         var person = JSON.stringify(this.driver);
+//         console.log(`Driver: ${person}`);
 //     }
 // }
 
-// let BMW = new Car('X5', "Germany", 2014, 240, 2.2, 
+// let BMW = new Car('X5', "Germany", 2014, 240, 2.2, 260, 2018,
 //     {name: 'Dima',
 //     surname: 'Dovhal',
 //     age: 19,
@@ -165,9 +165,9 @@
 
 // BMW.drive();
 // BMW.info();
-// BMW.increaseMaxSpeed(15);
-// BMW.changeYear(2001);
-// BMW.addDriver({name: 'Maks', age: '80'});
+// BMW.increaseMaxSpeed();
+// BMW.changeYear();
+// BMW.addDriver();
 
 // console.log(BMW);
 

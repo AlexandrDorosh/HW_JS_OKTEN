@@ -64,40 +64,39 @@
 
 // Answer #3
 
-// function Car(model, producer, year, maxSpeed, engineCapacity, newSpeed, newValue, driver){
-//     this.model = model,
-//     this.producer = producer,
-//     this.year = year,
-//     this.maxSpeed = maxSpeed,
-//     this.engineCapacity = engineCapacity,
-//     this.newSpeed = newSpeed,
-//     this.newValue = newValue,
-//     this.driver = driver
+// function Car(model, producer, year, maxSpeed, engineCapacity){
+//     this.model = model
+//     this.producer = producer
+//     this.year = year
+//     this.maxSpeed = maxSpeed
+//     this.engineCapacity = engineCapacity
+//     this.driver = {}
 
 //     this.drive = function(){
 //         console.log(`Go with speed ${this.maxSpeed} in hour`);
 //     }
 
 //     this.info = function(){
-//         console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${maxSpeed}, Engine capacity: ${this.engineCapacity}`);
+//         console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${this.maxSpeed}, Engine capacity: ${this.engineCapacity}`);
 //     }
 
-//     this.increaseMaxSpeed = function(){
-//         // let newSpeed = maxSpeed + 50;
-//         console.log(`New speed: ${this.newSpeed}`);
+//     this.increaseMaxSpeed = function(newSpeed){
+//         this.maxSpeed = this.maxSpeed + newSpeed;
+//         console.log(`New speed: ${newSpeed}`);
 //     }
 
-//     this.changeYear = function(){
-//         console.log(`New value: ${this.newValue}`);
+//     this.changeYear = function(newValue){
+//         this.year = newValue
+//         console.log(`New value: ${newValue}`);
 //     }
 
-//     this.addDriver = function(){
-//         var person = JSON.stringify(this.driver);
-//         console.log(`Driver: ${person}`);
+//     this.addDriver = function(driver){
+//         this.driver = driver;
+//         console.log(`Driver: ${driver}`);
 //     }
 // }
 
-// let Audi = new Car('A6', "Germany", 2016, 220, 2.5, 260, 2019, 
+// let Audi = new Car('A6', "Germany", 2016, 220, 2.5, 260, 2019,
 //     {name: 'Alex',
 //     surname: 'Dovhal',
 //     age: 22,
@@ -106,9 +105,9 @@
 
 // Audi.drive();
 // Audi.info();
-// Audi.increaseMaxSpeed();
-// Audi.changeYear();
-// Audi.addDriver();
+// Audi.increaseMaxSpeed(15);
+// Audi.changeYear(2001);
+// Audi.addDriver({name: 'Maks', age: '80'});
 // console.log(Audi);
 
 
@@ -123,15 +122,13 @@
 // Answer #4
 
 // class Car{
-//     constructor(model, producer, year, maxSpeed, engineCapacity, newSpeed, newValue, driver){
+//     constructor(model, producer, year, maxSpeed, engineCapacity){
 //         this.model = model,
 //         this.producer = producer,
 //         this.year = year,
 //         this.maxSpeed = maxSpeed,
 //         this.engineCapacity = engineCapacity,
-//         this.newSpeed = newSpeed,
-//         this.newValue = newValue,
-//         this.driver = driver
+//         this.driver = {}
 //     }
     
 
@@ -143,21 +140,23 @@
 //         console.log(`Model: ${this.model}, Producer: ${this.producer}, Year: ${this.year}, Max speed: ${this.maxSpeed}, Engine capacity: ${this.engineCapacity}`);
 //     }
 
-//     increaseMaxSpeed(){
-//         console.log(`New speed: ${this.newSpeed}`);
+//     increaseMaxSpeed(newSpeed){
+//         this.maxSpeed = this.maxSpeed + newSpeed;
+//         console.log(`New speed: ${newSpeed}`);
 //     }
-
-//     changeYear(){
-//         console.log(`New value: ${this.newValue}`);
+        
+//     changeYear(newValue){
+//         this.year = newValue
+//         console.log(`New value: ${newValue}`);
 //     }
-
-//     addDriver(){
-//         var person = JSON.stringify(this.driver);
-//         console.log(`Driver: ${person}`);
+        
+//     addDriver(driver){
+//         this.driver = driver;
+//         console.log(`Driver: ${driver}`);
 //     }
 // }
 
-// let BMW = new Car('X5', "Germany", 2014, 240, 2.2, 260, 2018, 
+// let BMW = new Car('X5', "Germany", 2014, 240, 2.2, 
 //     {name: 'Dima',
 //     surname: 'Dovhal',
 //     age: 19,
@@ -166,9 +165,9 @@
 
 // BMW.drive();
 // BMW.info();
-// BMW.increaseMaxSpeed();
-// BMW.changeYear();
-// BMW.addDriver();
+// BMW.increaseMaxSpeed(15);
+// BMW.changeYear(2001);
+// BMW.addDriver({name: 'Maks', age: '80'});
 
 // console.log(BMW);
 
